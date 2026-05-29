@@ -588,3 +588,54 @@ textarea {
 .social-links .instagram-link:hover .social-icon {
     transform: scale(1.1);
 }
+
+/* ==========================================================================
+   X. COMPOSANT : LOADER PLEIN ÉCRAN
+   ========================================================================== */
+/* Bloquer le scroll pendant le chargement */
+body.loading {
+    overflow: hidden;
+}
+
+#page-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    opacity: 1;
+    visibility: visible;
+    /* Transition fluide pour le fond noir */
+    transition: opacity 0.6s ease-in-out, visibility 0.6s;
+}
+
+.loader-content {
+    text-align: center;
+    max-width: 300px;
+    width: 100%;
+}
+
+.loader-gif {
+    width: 100%;
+    height: auto;
+    display: block;
+    opacity: 1;
+    /* Transition fluide pour le GIF seul */
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* ÉTAPE 1 : Le GIF s'efface */
+#page-loader.gif-fade-out .loader-gif {
+    opacity: 0;
+}
+
+/* ÉTAPE 2 : Le fond noir s'efface */
+#page-loader.bg-fade-out {
+    opacity: 0;
+    visibility: hidden;
+}
