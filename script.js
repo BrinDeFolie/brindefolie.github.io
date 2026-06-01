@@ -1,4 +1,25 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async () => {
+	const injectComponents = async () => {
+        const elements = document.querySelectorAll('[data-include]');
+        
+        for (let el of elements) {
+            const file = el.getAttribute('data-include');
+            try {
+                const response = await fetch(file);
+                if (response.ok) {
+                    el.innerHTML = await response.text();
+                } else {
+                    console.error(`Erreur de chargement du composant : ${file}`);
+                }
+            } catch (error) {
+                console.error(`Erreur réseau sur le composant ${file}:`, error);
+            }
+        }
+    };
+
+    // On lance l'injection et on attend qu'elle se termine
+    await injectComponents();
+	
     const loader = document.getElementById('page-loader');
     const body = document.body;
 
