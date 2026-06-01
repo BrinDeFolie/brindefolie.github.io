@@ -20,6 +20,20 @@ document.addEventListener("DOMContentLoaded", async () => {
     // On lance l'injection et on attend qu'elle se termine
     await injectComponents();
 	
+	// 1B. SCROLL DIRECT TOUT EN BAS AU CLIC SUR LE BOUTON CONTACT
+    const contactBtn = document.querySelector('.nav-cta');
+    if (contactBtn) {
+        contactBtn.addEventListener('click', (e) => {
+            e.preventDefault(); // Empêche le comportement par défaut du lien
+            
+            // Fait défiler la page proprement jusqu'au pixel maximum du bas
+            window.scrollTo({
+                top: document.documentElement.scrollHeight,
+                behavior: 'smooth' // Descente fluide esthétique
+            });
+        });
+    }
+	
     const loader = document.getElementById('page-loader');
     const body = document.body;
 
