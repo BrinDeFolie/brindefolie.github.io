@@ -10,26 +10,7 @@
 </head>
 <body>
 
-    <header id="main-header">
-        <div class="container header-flex">
-            <div class="brand">
-                <a href="index.html" class="logo-link">
-                    <img src="images/SVG/TitC.svg" alt="Brin de Folie" class="logo-img">
-                </a>
-                <p class="tagline">Théâtre effervescent à Toulouse</p>
-            </div>
-            
-            <nav id="main-nav">
-                <ul>
-                    <li><a href="troupe.html">La troupe</a></li>
-                    <li><a href="oeuvre-fracasse.html">Prochaines dates</a></li>
-                    <li><a href="pieces.html">Nos pièces</a></li>
-                    <li><a href="#ateliers">Ateliers</a></li>
-                    <li><a href="#contact" class="nav-cta">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <header id="main-header" data-include="header.html"></header>
 
     <main>
         <section id="troupe-intro" class="container">
@@ -93,42 +74,8 @@
         </section>
     </main>
 
-    <footer id="main-footer">
-        <div class="container footer-grid">
-            <section class="footer-form">
-                <h3>Une question ? <strong>Écrivez-nous</strong></h3>
-                <form action="#" method="POST">
-                    <div class="form-group-inline">
-                        <input type="text" name="name" placeholder="Votre nom" required />
-                        <input type="email" name="email" placeholder="Votre email" required />
-                    </div>
-                    <textarea name="message" placeholder="Votre message..." required></textarea>
-                    <button type="submit" class="btn-submit">Envoyer le message</button>
-                </form>
-            </section>
-
-            <section class="footer-info">
-                <h3>Compagnie Brin de Folie</h3>
-                <p>Association loi 1901 dédiée à la création théâtrale et au partage artistique à Toulouse.</p>
-                
-                <address class="contact-details">
-                    <p>📍 Maison des Associations, Empalot, Toulouse</p>
-                    <p>✉️ <a href="mailto:contact@brindefolie.asso.fr">contact@brindefolie.asso.fr</a></p>
-                </address>
-
-                <div class="social-links">
-                    <a href="https://instagram.com/BrinDeFolie" target="_blank" rel="noopener" aria-label="Instagram" class="instagram-link">
-                        <span>Instagram</span>
-                        <img src="images/2x/Insta.png" alt="" class="social-icon" />
-                    </a>
-                </div>
-            </section>
-        </div>
-        
-        <div class="footer-bottom container">
-            <p>&copy; 2026 Brin de Folie. Tous droits réservés.</p>
-        </div>
-    </footer>
+    <footer id="main-footer" data-include="footer.html"></footer>
+	<script src="script.js"></script>
 
 </body>
 </html>
