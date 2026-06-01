@@ -1,0 +1,143 @@
+/* ==========================================================================
+   PAGE LA TROUPE - MODULE SPECIFIQUE
+   ========================================================================== */
+
+/* En-tête de la page */
+#troupe-intro {
+    padding: 6rem 2rem 3rem 2rem;
+    text-align: center;
+}
+
+#troupe-intro h1 {
+    font-size: 5rem;
+    margin-bottom: 1.5rem;
+}
+
+.intro-lead {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Grille des membres (CSS Grid) */
+#troupe-hub {
+    padding-bottom: 6rem;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 colonnes pour garder de grands portraits */
+    gap: 3rem;
+}
+
+/* Carte membre de la troupe */
+.member-card {
+    background-color: var(--color-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-signature); /* Signature de la DA */
+    overflow: hidden;
+    display: flex; /* Aligne la photo à gauche et le texte à droite */
+    transition: var(--transition);
+}
+
+.member-card:hover {
+    border-color: var(--color-primary);
+    transform: translateY(-4px);
+}
+
+/* Conteneur de l'image */
+.member-image {
+    width: 40%;
+    min-width: 160px;
+    position: relative;
+    overflow: hidden;
+}
+
+.member-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: calc(var(--radius-signature) - 4px) 0 0 0;
+}
+
+/* Conteneur des textes */
+.member-info {
+    width: 60%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.member-role {
+    font-family: var(--font-brand);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    color: var(--color-primary);
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.member-info h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--color-text);
+}
+
+.member-info p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN
+   ========================================================================== */
+@media screen and (max-width: 980px) {
+    .team-grid {
+        grid-template-columns: 1fr; /* Passage sur une seule colonne */
+        gap: 2rem;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .member-card {
+        flex-direction: column; /* La photo passe au-dessus du texte sur mobile */
+    }
+    .member-image {
+        width: 100%;
+        height: 250px;
+    }
+    .member-image img {
+        border-radius: calc(var(--radius-signature) - 4px) calc(var(--radius-signature) - 4px) 0 0;
+    }
+    .member-info {
+        width: 100%;
+        padding: 1.5rem;
+    }
+}
+
+/* Conteneur pour le centrage */
+.actions-back {
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem; /* Espace conséquent après le dernier membre */
+    width: 100%;
+}
+
+/* Ajustement spécifique du bouton de retour */
+.btn-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 2.5rem; /* Bouton légèrement plus grand pour marquer la fin de page */
+}
+
+/* Animation sur la flèche au survol */
+.btn-back .icon-arrow {
+    transition: transform 0.2s ease-in-out;
+}
+
+.btn-back:hover .icon-arrow {
+    transform: translateX(-4px); /* La flèche recule subtilement au survol */
+}
