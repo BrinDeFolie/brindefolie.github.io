@@ -1,0 +1,255 @@
+/* ==========================================================================
+   TEMPLATE COMMUN DES PAGES ŒUVRES (PIÈCES)
+   ========================================================================== */
+
+/* --- 1. BANNIÈRE HERO (PLEIN ÉCRAN VISUEL) --- */
+.show-hero {
+    position: relative;
+    height: 60vh; /* Moins haut qu'un plein écran pour voir directement le début du texte */
+    min-height: 400px;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+    color: #ffffff;
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.4) 60%, rgba(0,0,0,0.2) 100%);
+    z-index: 2;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+    padding-bottom: 3rem;
+    width: 100%;
+}
+
+.show-meta-author {
+    font-family: var(--font-brand);
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+    color: var(--color-primary); /* Rose ou couleur d'accent */
+}
+
+.show-hero h1 {
+    font-size: 5rem;
+    margin: 0.5rem 0 1.5rem 0;
+    line-height: 1;
+}
+
+/* Badges d'infos */
+.badge-container {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.info-badge {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 0.4rem 1rem;
+    font-size: 0.85rem;
+    border-radius: var(--radius-signature);
+    backdrop-filter: blur(4px);
+}
+
+.info-badge.status {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    font-weight: bold;
+}
+
+/* --- 2. GRILLE DE DÉTAILS --- */
+.show-details {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.details-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Structure asymétrique classique */
+    gap: 4rem;
+}
+
+/* Colonne Gauche */
+.synopsis-lead {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+    color: var(--color-text);
+}
+
+.artistic-note {
+    background-color: var(--color-card);
+    border-left: 3px solid var(--color-primary);
+    padding: 2rem;
+    border-radius: 0 var(--radius-signature) var(--radius-signature) 0;
+}
+
+.artistic-note h3 {
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.artistic-note p {
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* Colonne Droite (Sidebar) */
+.sidebar-block {
+    background-color: var(--color-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-signature);
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* Encart Date */
+.next-date-card {
+    border-color: var(--color-primary); /* Encadré en rose clignotant/flash si à l'affiche */
+    text-align: center;
+}
+
+.date-highlight {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1.5rem 0;
+}
+
+.date-highlight .day {
+    font-size: 3rem;
+    font-family: var(--font-brand);
+    font-weight: 900;
+    line-height: 1;
+    color: var(--color-primary);
+}
+
+.date-highlight .month {
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+}
+
+.next-date-card .location {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Encart Distribution */
+.creative-team h3 {
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: 0.5rem;
+}
+
+.creative-team ul {
+    list-style: none;
+    padding: 0;
+}
+
+.creative-team li {
+    font-size: 0.95rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+}
+
+/* --- 3. GALERIE DE PHOTOS --- */
+.show-gallery {
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+}
+
+.section-subtitle {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.gallery-item {
+    height: 200px;
+    overflow: hidden;
+    border-radius: var(--radius-signature);
+    border: 1px solid var(--color-border);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+/* --- 4. ACTION RETOUR --- */
+.actions-back {
+    display: flex;
+    justify-content: center;
+    margin: 2rem auto 6rem auto;
+}
+
+.btn-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 2.5rem;
+}
+
+.btn-back .icon-arrow {
+    transition: transform 0.2s ease-in-out;
+}
+
+.btn-back:hover .icon-arrow {
+    transform: translateX(-4px);
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN
+   ========================================================================== */
+@media screen and (max-width: 980px) {
+    .details-grid {
+        grid-template-columns: 1fr; /* Passage sur une colonne sur tablette/mobile */
+        gap: 3rem;
+    }
+    .show-hero h1 {
+        font-size: 3.5rem;
+    }
+    .gallery-grid {
+        grid-template-columns: 1fr; /* Galerie verticale sur petits écrans */
+    }
+    .gallery-item {
+        height: 250px;
+    }
+}

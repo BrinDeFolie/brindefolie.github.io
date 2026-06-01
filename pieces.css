@@ -1,0 +1,172 @@
+/* ==========================================================================
+   PAGE CATALOGUE DES PIÈCES - MODULE SPECIFIQUE
+   ========================================================================== */
+
+#pieces-intro {
+    padding: 6rem 2rem 3rem 2rem;
+    text-align: center;
+}
+
+#pieces-intro h1 {
+    font-size: 5rem;
+    margin-bottom: 1.5rem;
+}
+
+.pieces-section {
+    padding-bottom: 4rem;
+}
+
+/* Titres des catégories (En tournée / Archives) */
+.category-title {
+    font-size: 2rem;
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: 0.75rem;
+    margin-bottom: 3rem;
+    color: var(--color-text);
+}
+
+#en-tournee .category-title {
+    color: var(--color-primary); /* Met en avant la section active */
+}
+
+/* Grille du catalogue */
+.catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Présentation par deux, impact visuel fort */
+    gap: 3rem;
+}
+
+/* Fiche Spectacle */
+.show-card {
+    background-color: var(--color-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-signature);
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    transition: var(--transition);
+}
+
+.show-card:hover {
+    transform: translateY(-4px);
+}
+
+.status-live:hover {
+    border-color: var(--color-primary);
+}
+
+.status-archive:hover {
+    border-color: #444;
+}
+
+/* Badge "Actuellement" */
+.show-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: var(--color-primary);
+    color: var(--color-text);
+    font-family: var(--font-brand);
+    font-weight: 900;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    padding: 0.3rem 0.8rem;
+    z-index: 2;
+    border-radius: var(--radius-signature);
+}
+
+/* Zone Image */
+.show-image {
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+}
+
+.show-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.show-card:hover .show-image img {
+    transform: scale(1.03);
+}
+
+/* Contenu texte */
+.show-content {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.show-author {
+    font-family: var(--font-brand);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
+}
+
+.show-content h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.show-content p {
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+/* Actions au bas de la carte */
+.show-actions {
+    margin-top: auto; /* Aligne les boutons si les textes ont des longueurs différentes */
+}
+
+/* Bouton retour accueil (réutilisation des styles de la page troupe) */
+.actions-back {
+    display: flex;
+    justify-content: center;
+    margin: 4rem auto 6rem auto;
+}
+
+.btn-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 2.5rem;
+}
+
+.btn-back .icon-arrow {
+    transition: transform 0.2s ease-in-out;
+}
+
+.btn-back:hover .icon-arrow {
+    transform: translateX(-4px);
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN
+   ========================================================================== */
+@media screen and (max-width: 980px) {
+    .catalog-grid {
+        grid-template-columns: 1fr; /* Une seule colonne sur tablette/mobile */
+        gap: 2rem;
+    }
+    .show-image {
+        height: 220px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #pieces-intro h1 {
+        font-size: 3.5rem;
+    }
+    .show-content h3 {
+        font-size: 1.6rem;
+    }
+}

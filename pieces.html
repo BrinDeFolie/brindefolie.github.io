@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nos Pièces | Brin de Folie</title>
+    <link rel="icon" type="image/svg+xml" href="images/SVG/IconB.svg" />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="pieces.css" />
+</head>
+<body>
+
+    <header id="main-header">
+        <div class="container header-flex">
+            <div class="brand">
+                <a href="index.html" class="logo-link">
+                    <img src="images/SVG/TitC.svg" alt="Brin de Folie" class="logo-img">
+                </a>
+                <p class="tagline">Théâtre effervescent à Toulouse</p>
+            </div>
+            
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="#intro">La troupe</a></li>
+                    <li><a href="#">Prochaines dates</a></li>
+                    <li><a href="#">Nos pièces</a></li>
+                    <li><a href="#ateliers">Ateliers</a></li>
+                    <li><a href="#contact" class="nav-cta">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="pieces-intro" class="container">
+            <h1>Le <span class="text-flash">Répertoire</span></h1>
+            <p class="intro-lead">Du tumulte des classiques revisités aux créations contemporaines, explorez les productions et l'historique artistique de la compagnie.</p>
+        </section>
+
+        <section id="en-tournee" class="container pieces-section">
+            <h2 class="category-title">À l'affiche & En tournée</h2>
+            <div class="catalog-grid">
+                
+                <article class="show-card status-live">
+                    <div class="show-badge">Actuellement</div>
+                    <div class="show-image">
+						<a href="oeuvre-fracasse.html" class="image-link" aria-label="Spectacle Fracasse">
+							<img src="images/pic04.jpg" alt="Spectacle Fracasse" />
+						</a>
+                    </div>
+                    <div class="show-content">
+                        <span class="show-author">Nicolas Turon</span>
+                        <h3>Fracasse</h3>
+                        <p>Une adaptation habitée et physique de l'œuvre classique, mêlant combats scéniques, poésie brute et énergie de troupe.</p>
+                        <div class="show-actions">
+                            <a href="oeuvre-fracasse.html" class="btn-primary btn-small">Découvrir la pièce</a>
+                        </div>
+                    </div>
+                </article>
+
+                </div>
+        </section>
+
+        <section id="archives" class="container pieces-section">
+            <h2 class="category-title">Archives & Créations passées</h2>
+            <div class="catalog-grid">
+                
+                <article class="show-card status-archive">
+                    <div class="show-image">
+						<a href="oeuvre-archive-bruitdecouloir.html" class="image-link" aria-label="Ancien spectacle">
+                            <img src="images/pic01.jpg" alt="Ancien spectacle" />
+                        </a>
+                    </div>
+                    <div class="show-content">
+                        <span class="show-author">Molière</span>
+                        <h3>Le Bourgeois Gentilhomme</h3>
+                        <p>Une version modernisée et décalée du chef-d'œuvre de Molière, jouée à guichets fermés lors de la saison 2024-2025.</p>
+                        <div class="show-actions">
+                            <a href="oeuvre-archive-bruitdecouloir.html" class="btn-secondary btn-small">Voir les archives</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="show-card status-archive">
+                    <div class="show-image">
+						<a href="oeuvre-archive-bruitdecouloir.html" class="image-link" aria-label="Ancien spectacle">
+							<img src="images/pic02.jpg" alt="Ancien spectacle" />
+						</a>
+                    </div>
+                    <div class="show-content">
+                        <span class="show-author">Création Collective</span>
+                        <h3>Bruit de Couloir</h3>
+                        <p>Pièce de théâtre contemporaine basée sur l'improvisation et l'expression corporelle, présentée au festival de Toulouse.</p>
+                        <div class="show-actions">
+                            <a href="oeuvre-archive-bruitdecouloir.html" class="btn-secondary btn-small">Voir les archives</a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <div class="container actions-back">
+            <a href="index.html" class="btn-secondary btn-back">
+                <span class="icon-arrow">←</span> Retour à l'accueil
+            </a>
+        </div>
+    </main>
+
+    <footer id="main-footer">
+        <div class="container footer-grid">
+            <section class="footer-form">
+                <h3>Une question ? <strong>Écrivez-nous</strong></h3>
+                <form action="#" method="POST">
+                    <div class="form-group-inline">
+                        <input type="text" name="name" placeholder="Votre nom" required />
+                        <input type="email" name="email" placeholder="Votre email" required />
+                    </div>
+                    <textarea name="message" placeholder="Votre message..." required></textarea>
+                    <button type="submit" class="btn-submit">Envoyer le message</button>
+                </form>
+            </section>
+
+            <section class="footer-info">
+                <h3>Compagnie Brin de Folie</h3>
+                <p>Association loi 1901 dédiée à la création théâtrale et au partage artistique à Toulouse.</p>
+                
+                <address class="contact-details">
+                    <p>📍 Maison des Associations, Empalot, Toulouse</p>
+                    <p>✉️ <a href="mailto:contact@brindefolie.asso.fr">contact@brindefolie.asso.fr</a></p>
+                </address>
+
+                <div class="social-links">
+                    <a href="https://instagram.com/BrinDeFolie" target="_blank" rel="noopener" aria-label="Instagram" class="instagram-link">
+                        <span>Instagram</span>
+                        <img src="images/2x/Insta.png" alt="" class="social-icon" />
+                    </a>
+                </div>
+            </section>
+        </div>
+        
+        <div class="footer-bottom container">
+            <p>&copy; 2026 Brin de Folie. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

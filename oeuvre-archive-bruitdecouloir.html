@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bruit de Couloir | Archives | Brin de Folie</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="images/SVG/IconB.svg" />
+
+    <!-- CSS Global (Structure, Header, Footer) -->
+    <link rel="stylesheet" href="main.css" />
+    <!-- CSS Commun à toutes les fiches d'œuvres -->
+    <link rel="stylesheet" href="oeuvre.css" />
+</head>
+<body>
+
+    <!-- NAV / HEADER PRINCIPAL -->
+    <header id="main-header">
+        <div class="container header-flex">
+            <div class="brand">
+                <a href="index.html" class="logo-link">
+                    <img src="images/SVG/TitC.svg" alt="Brin de Folie" class="logo-img">
+                </a>
+                <p class="tagline">Théâtre effervescent à Toulouse</p>
+            </div>
+            
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="#intro">La troupe</a></li>
+                    <li><a href="#">Prochaines dates</a></li>
+                    <li><a href="#">Nos pièces</a></li>
+                    <li><a href="#ateliers">Ateliers</a></li>
+                    <li><a href="#contact" class="nav-cta">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- BANNÈRE IMMERSIVE (HERO) -->
+        <section class="show-hero">
+            <div class="hero-bg">
+                <img src="images/pic02.jpg" alt="Spectacle Bruit de Couloir" />
+            </div>
+            <div class="hero-overlay"></div>
+            <div class="hero-content container">
+                <span class="show-meta-author">Création Collective</span>
+                <h1>Bruit de Couloir</h1>
+                <div class="badge-container">
+                    <span class="info-badge archive-badge">Archive</span>
+                    <span class="info-badge duration">⏱ 1h15</span>
+                    <span class="info-badge age">👶 Tout public</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTENU PRINCIPAL & RETOUR SUR CRÉATION -->
+        <section class="show-details container">
+            <div class="details-grid">
+                
+                <!-- Colonne Gauche : Résumé et Note d'intention -->
+                <div class="details-text">
+                    <h2>Le <span class="text-flash">Synopsis</span></h2>
+                    <p class="synopsis-lead">Un espace de transit, des silhouettes qui se croisent, des bribes de conversations volées. Qu'est-ce qui se joue dans l'ombre de nos trajectoires quotidiennes quand les portes se ferment ?</p>
+                    
+                    <div class="artistic-note">
+                        <h3>L'expérience de création</h3>
+                        <p>Né d'un processus de recherche intensif en laboratoire, <em>Bruit de Couloir</em> est un spectacle entièrement fondé sur l'improvisation et le théâtre physique. Sans texte préétabli à l'origine, la troupe a articulé la scénographie autour du mouvement, créant une atmosphère chorégraphiée et texturée où le silence est aussi bavard que les mots.</p>
+                    </div>
+                </div>
+
+                <!-- Colonne Droite : Fiche Technique & Historique -->
+                <aside class="details-sidebar">
+                    <div class="sidebar-block history-card">
+                        <h3>Historique & Dates</h3>
+                        <div class="archive-dates-list">
+                            <div class="archive-date-item">
+                                <span class="year-badge">2025</span>
+                                <p>Festival de Théâtre de Toulouse (Création)</p>
+                            </div>
+                            <div class="archive-date-item">
+                                <span class="year-badge">2024</span>
+                                <p>Sorties de résidence et laboratoires publics</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-block creative-team">
+                        <h3>Distribution & Équipe</h3>
+                        <ul>
+                            <li><strong>Mise en scène :</strong> Création collective</li>
+                            <li><strong>Avec :</strong> Les comédiens de la troupe</li>
+                            <li><strong>Création Sonore :</strong> Régie Brin de Folie</li>
+                            <li><strong>Expression corporelle :</strong> Travail d'atelier</li>
+                        </ul>
+                    </div>
+                </aside>
+
+            </div>
+        </section>
+
+        <!-- GALERIE PHOTOS -->
+        <section class="show-gallery container">
+            <h2 class="section-subtitle">Aperçu des <span class="text-flash">Archives</span></h2>
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="images/pic03.jpg" alt="Photo d'archive 1" /></div>
+                <div class="gallery-item"><img src="images/pic04.jpg" alt="Photo d'archive 2" /></div>
+                <div class="gallery-item"><img src="images/pic01.jpg" alt="Photo d'archive 3" /></div>
+            </div>
+        </section>
+
+        <!-- BOUTON DE RETOUR CENTRÉ -->
+        <div class="container actions-back">
+            <a href="pieces.html#archives" class="btn-secondary btn-back">
+                <span class="icon-arrow">←</span> Retour aux archives
+            </a>
+        </div>
+    </main>
+
+    <!-- FOOTER (Identique) -->
+    <footer id="main-footer">
+        <div class="container footer-grid">
+            <section class="footer-form">
+                <h3>Une question ? <strong>Écrivez-nous</strong></h3>
+                <form action="#" method="POST">
+                    <div class="form-group-inline">
+                        <input type="text" name="name" placeholder="Votre nom" required />
+                        <input type="email" name="email" placeholder="Votre email" required />
+                    </div>
+                    <textarea name="message" placeholder="Votre message..." required></textarea>
+                    <button type="submit" class="btn-submit">Envoyer le message</button>
+                </form>
+            </section>
+
+            <section class="footer-info">
+                <h3>Compagnie Brin de Folie</h3>
+                <p>Association loi 1901 dédiée à la création théâtrale et au partage artistique à Toulouse.</p>
+                
+                <address class="contact-details">
+                    <p>📍 Maison des Associations, Empalot, Toulouse</p>
+                    <p>✉️ <a href="mailto:contact@brindefolie.asso.fr">contact@brindefolie.asso.fr</a></p>
+                </address>
+
+                <div class="social-links">
+                    <a href="https://instagram.com/BrinDeFolie" target="_blank" rel="noopener" aria-label="Instagram" class="instagram-link">
+                        <span>Instagram</span>
+                        <img src="images/2x/Insta.png" alt="" class="social-icon" />
+                    </a>
+                </div>
+            </section>
+        </div>
+        
+        <div class="footer-bottom container">
+            <p>&copy; 2026 Brin de Folie. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
