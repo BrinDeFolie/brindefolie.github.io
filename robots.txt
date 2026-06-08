@@ -1,0 +1,8 @@
+# www.robotstxt.org/
+
+# Permettre à tous les moteurs de recherche d'explorer le site
+User-agent: *
+Allow: /
+
+# Indiquer l'emplacement du plan du site (Sitemap)
+Sitemap: https://brindefolie.github.io/sitemap.xml
