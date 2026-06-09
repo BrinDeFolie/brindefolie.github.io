@@ -4,18 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mentions Légales | Brin de Folie</title>
-    
-    <!-- Favicon -->
+
+    <script type="application/ld+json">
+	{
+  		"@context": "https://schema.org",
+  		"@type": "WebSite",
+  		"name": "Brin de Folie",
+  		"url": "https://ton-pseudo.github.io/"
+	}
+	</script>
     <link rel="icon" type="image/svg+xml" href="images/SVG/IconB.svg" />
 
-    <!-- CSS Global (Structure, Header, Footer) -->
     <link rel="stylesheet" href="main.css" />
-    <!-- CSS Spécifique pour la page de texte juridique -->
     <link rel="stylesheet" href="mention.css" />
 </head>
 <body>
 
-    <!-- En-tête injecté dynamiquement -->
     <header id="main-header" data-include="header.html"></header>
 
     <main class="container">
@@ -49,7 +53,6 @@
         </article>
     </main>
 
-    <!-- Pied de page injecté dynamiquement -->
     <footer id="main-footer" data-include="footer.html"></footer>
 
     <!-- Script de gestion globale -->
